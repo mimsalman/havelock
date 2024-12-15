@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <div class="container">
+
+            <div class="order-summary-section">
+                <h2 class="section-heading">Order Summary</h2>
+                <table id="order-summary">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-summary-body">
+                        <!-- Order summary items will be here -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td id="order-total">Rs.0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="details-section">
+                <h2 class="section-heading">Personal and Billing Details</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone:</label>
+                        <input type="text" id="phone" name="phone" required pattern="\d{10}" maxlength="10" title="Please enter a valid phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address2">Address Line 2 (optional):</label>
+                        <input type="text" id="address2" name="address2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zip">Zip Code:</label>
+                        <input type="text" id="zip" name="zip" required pattern="\d{5}" title="Please enter a valid zip code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Select a country:</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select a country</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                        </select>
+                    </div>
+
+                    <h2 class="section-heading">Payment Details</h2>
+
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number" required pattern="\d{16}" maxlength="16" title="Please enter a valid 16-digit card number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date (MM/YY):</label>
+                        <input type="text" id="expiry-date" name="expiry-date" required pattern="\d{2}/\d{2}" title="Please enter a valid expiry date in MM/YY format">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" required pattern="\d{3}" maxlength="3" title="Please enter a valid 3-digit CVV">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardholder-name">Cardholder Name:</label>
+                        <input type="text" id="cardholder-name" name="cardholder-name" required pattern="[a-zA-Z\s]+" title="Please enter a valid name">
+                    </div>
+
+                    <button type="submit">Pay Now</button>
+                </form>
+            </div>
+
+        
+        </div>
+    </main>
+
+    <script src="./order.js"></script>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Pharmacy</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <header class="header"> 
+        <nav class="header--menu"> 
+            <div class="logo"> 
+                <img src="./Images/Hospital logo.png" alt="Logo"> 
+            </div> 
+            <div class="hamburger-menu"> 
+                <i class="fa fa-bars"></i> 
+            </div> 
+            <ul class="nav-links"> 
+                <li><a href="#">Home</a></li> 
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li> 
+                <li><a href="#">Doctors</a></li> 
+                <li><a href="#">Reservation</a></li> 
+                <li><a href="#">Pharmacy</a></li> 
+                <li><a href="#">Contact Us</a></li> 
+            </ul> 
+        </nav>
+
+    <!-- Cover section -->
+    <section class="cover">
+        <div class="cover-overlay">
+            <h1>Havelock City Hospital Pharmacy</h1>
+            <span class="slogan">Healthy Today, Happy Tomorrow</span>
+        </div>
+    </section>
+
+    <main>
+        <!-- card item section 1 Analgesics -->
+        <h2 class="section-heading">Analgesics</h2>
+        <div class="card--list">
+            <div class="card">
+                <img src="./Images/Paracetamol.jpeg" alt="">
+                <h4 class="card--title">Paracetamol</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.15</div>
+                    <input type="number" name="quantity" id="paracetamol-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Paracetamol', 15, 'paracetamol-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Ibuprofen.jpeg" alt="">
+                <h4 class="card--title">Ibuprofen</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.25</div>
+                    <input type="number" name="quantity" id="ibuprofen-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Ibuprofen', 25, 'ibuprofen-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Aspirin.png" alt="">
+                <h4 class="card--title">Aspirin</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.20</div>
+                    <input type="number" name="quantity" id="aspirin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Aspirin', 20, 'aspirin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Naproxen.jpeg" alt="">
+                <h4 class="card--title">Naproxen</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.30</div>
+                    <input type="number" name="quantity" id="naproxen-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Naproxen', 30, 'naproxen-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Diclofenac.jpeg" alt="">
+                <h4 class="card--title">Diclofenac</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.45</div>
+                    <input type="number" name="quantity" id="diclofenac-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Diclofenac', 45, 'diclofenac-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Tramadol.jpeg" alt="">
+                <h4 class="card--title">Tramadol</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.60</div>
+                    <input type="number" name="quantity" id="tramadol-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Tramadol', 60, 'tramadol-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Codeine.jpeg" alt="">
+                <h4 class="card--title">Codeine</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.70</div>
+                    <input type="number" name="quantity" id="codeine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Codeine', 70, 'codeine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Celecoxib.jpg" alt="">
+                <h4 class="card--title">Celecoxib</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.90</div>
+                    <input type="number" name="quantity" id="celecoxib-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Celecoxib', 90, 'celecoxib-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Morphine.jpg" alt="">
+                <h4 class="card--title">Morphine</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.145</div>
+                    <input type="number" name="quantity" id="morphine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Morphine', 145, 'morphine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Oxycodone.jpeg" alt="">
+                <h4 class="card--title">Oxycodone</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.175</div>
+                    <input type="number" name="quantity" id="oxycodone-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Oxycodone', 175, 'oxycodone-quantity')"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- card item section 2 Antibiotics -->
+        <h2 class="section-heading">Antibiotics</h2>
+        <div class="card--list">
+            <div class="card">
+                <img src="./Images/Amoxicillin (250mg).jpeg" alt="">
+                <h4 class="card--title">Amoxicillin (250mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.15</div>
+                    <input type="number" name="quantity" id="amoxicillin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Amoxicillin (250mg)', 15, 'amoxicillin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Azithromycin (250mg).jpg" alt="">
+                <h4 class="card--title">Azithromycin (250mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.35</div>
+                    <input type="number" name="quantity" id="azithromycin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Azithromycin (250mg)', 35, 'azithromycin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Erythromycin (250mg).jpg" alt="">
+                <h4 class="card--title">Erythromycin (250mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.10</div>
+                    <input type="number" name="quantity" id="erythromycin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Erythromycin (250mg)', 10, 'erythromycin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Cloxacillin (250mg).png" alt="">
+                <h4 class="card--title">Cloxacillin (250mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.6</div>
+                    <input type="number" name="quantity" id="cloxacillin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Cloxacillin (250mg)', 6, 'cloxacillin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Cephalexin Syrup (5ml).png" alt="">
+                <h4 class="card--title">Cephalexin Syrup (125mg/5ml)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.150</div>
+                    <input type="number" name="quantity" id="cephalexin-syrup-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Cephalexin Syrup (125mg/5ml)', 150, 'cephalexin-syrup-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Augmentin (625mg).jpeg" alt="">
+                <h4 class="card--title">Augmentin (625mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.120</div>
+                    <input type="number" name="quantity" id="augmentin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Augmentin (625mg)', 120, 'augmentin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Ciprofloxacin (500mg).jpg" alt="">
+                <h4 class="card--title">Ciprofloxacin (500mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.20</div>
+                    <input type="number" name="quantity" id="ciprofloxacin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Ciprofloxacin (500mg)', 20, 'ciprofloxacin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Clarithromycin (250mg).jpeg" alt="">
+                <h4 class="card--title">Clarithromycin (250mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.30</div>
+                    <input type="number" name="quantity" id="clarithromycin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Clarithromycin (250mg)', 30, 'clarithromycin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Metronidazole Suspension (100ml).jpg" alt="">
+                <h4 class="card--title">Metronidazole (100ml)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.750</div>
+                    <input type="number" name="quantity" id="metronidazole-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Metronidazole (100ml)', 750, 'metronidazole-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Doxycycline (100mg).jpg" alt="">
+                <h4 class="card--title">Doxycycline (100mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.20</div>
+                    <input type="number" name="quantity" id="doxycycline-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Doxycycline (100mg)', 20, 'doxycycline-quantity')"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- card item section 3 Antidepressants -->
+        <h2 class="section-heading">Antidepressants</h2>
+        <div class="card--list">
+            <div class="card">
+                <img src="./Images/Serlin (Sertraline) 50mg.jpg" alt="">
+                <h4 class="card--title">Serlin (Sertraline) 50mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.39</div>
+                    <input type="number" name="quantity" id="serlin-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Serlin (Sertraline) 50mg', 39, 'serlin-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Nexito (Escitalopram) 10mg.jpeg" alt="">
+                <h4 class="card--title">Nexito 10mg (Escitalopram)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.61</div>
+                    <input type="number" name="quantity" id="nexito-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Nexito (Escitalopram) 10mg', 61, 'nexito-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Zosert (Sertraline) 50mg.jpg" alt="">
+                <h4 class="card--title">Zosert (Sertraline) 50mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.53</div>
+                    <input type="number" name="quantity" id="zosert-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Zosert (Sertraline) 50mg', 53, 'zosert-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Fluoxetine (Prozac) 20mg.JPG" alt="">
+                <h4 class="card--title">Fluoxetine (Prozac) 20mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.50</div>
+                    <input type="number" name="quantity" id="fluoxetine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Fluoxetine (Prozac) 20mg', 50, 'fluoxetine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Citalopram 20mg.jpeg" alt="">
+                <h4 class="card--title">Citalopram <br>20mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.50</div>
+                    <input type="number" name="quantity" id="citalopram-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Citalopram 20mg', 50, 'citalopram-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Venlafaxine (Effexor) 75mg.jpeg" alt="">
+                <h4 class="card--title">Venlafaxine (Effexor) 75mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.80</div>
+                    <input type="number" name="quantity" id="venlafaxine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Venlafaxine (Effexor) 75mg', 80, 'venlafaxine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Amitriptyline 25mg.jpg" alt="">
+                <h4 class="card--title">Amitriptyline 25mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.35</div>
+                    <input type="number" name="quantity" id="amitriptyline-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Amitriptyline 25mg', 35, 'amitriptyline-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Mirtazapine (Remeron) 15mg.jpg" alt="">
+                <h4 class="card--title">Mirtazapine (Remeron) 15mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.95</div>
+                    <input type="number" name="quantity" id="mirtazapine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Mirtazapine (Remeron) 15mg', 95, 'mirtazapine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Duloxetine (Cymbalta) 30mg.jpg" alt="">
+                <h4 class="card--title">Duloxetine (Cymbalta) 30mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.100</div>
+                    <input type="number" name="quantity" id="duloxetine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Duloxetine (Cymbalta) 30mg', 100, 'duloxetine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Paroxetine (Paxil) 20mg.png" alt="">
+                <h4 class="card--title">Paroxetine (Paxil) 20mg</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.65</div>
+                    <input type="number" name="quantity" id="paroxetine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Paroxetine (Paxil) 20mg', 65, 'paroxetine-quantity')"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- card item section 4 Antihistamines -->
+        <h2 class="section-heading">Antihistamines</h2>
+        <div class="card--list">
+            <div class="card">
+                <img src="./Images/Cetirizine (10mg).jpg" alt="">
+                <h4 class="card--title">Cetirizine <br>(10mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.4</div>
+                    <input type="number" name="quantity" id="cetirizine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Cetirizine (10mg)', 4, 'cetirizine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Loratadine (10mg).jpg" alt="">
+                <h4 class="card--title">Loratadine <br> (10mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.37</div>
+                    <input type="number" name="quantity" id="loratadine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Loratadine (10mg)', 37, 'loratadine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Fexofenadine (120mg).jpeg" alt="">
+                <h4 class="card--title">Fexofenadine (120mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.60</div>
+                    <input type="number" name="quantity" id="fexofenadine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Fexofenadine (120mg)', 60, 'fexofenadine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Diphenhydramine (25mg).png" alt="">
+                <h4 class="card--title">Diphenhydramine (25mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.30</div>
+                    <input type="number" name="quantity" id="diphenhydramine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Diphenhydramine (25mg)', 30, 'diphenhydramine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Chlorpheniramine (4mg).jpg" alt="">
+                <h4 class="card--title">Chlorpheniramine (4mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.1</div>
+                    <input type="number" name="quantity" id="chlorpheniramine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Chlorpheniramine (4mg)', 1, 'chlorpheniramine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Hydroxyzine (25mg).jpeg" alt="">
+                <h4 class="card--title">Hydroxyzine (25mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.40</div>
+                    <input type="number" name="quantity" id="hydroxyzine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Hydroxyzine (25mg)', 40, 'hydroxyzine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Desloratadine (5mg).jpg" alt="">
+                <h4 class="card--title">Desloratadine (5mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.55</div>
+                    <input type="number" name="quantity" id="desloratadine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Desloratadine (5mg)', 55, 'desloratadine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Levocetirizine (5mg).jpg" alt="">
+                <h4 class="card--title">Levocetirizine (5mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.30</div>
+                    <input type="number" name="quantity" id="levocetirizine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Levocetirizine (5mg)', 30, 'levocetirizine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Rupatadine (10mg).jpeg" alt="">
+                <h4 class="card--title">Rupatadine (10mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.70</div>
+                    <input type="number" name="quantity" id="rupatadine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Rupatadine (10mg)', 70, 'rupatadine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Cyproheptadine (4mg).jpg" alt="">
+                <h4 class="card--title">Cyproheptadine (4mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.3</div>
+                    <input type="number" name="quantity" id="cyproheptadine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Cyproheptadine (4mg)', 3, 'cyproheptadine-quantity')"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- card item section 5 Antihypertensives -->
+        <h2 class="section-heading">Antihypertensives</h2>
+        <div class="card--list">
+            <div class="card">
+                <img src="./Images/Amlodipine (5mg).png" alt="">
+                <h4 class="card--title">Amlodipine (5mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.6</div>
+                    <input type="number" name="quantity" id="amlodipine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Amlodipine (5mg)', 6, 'amlodipine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Losartan (50mg).jpg" alt="">
+                <h4 class="card--title">Losartan (50mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.22</div>
+                    <input type="number" name="quantity" id="losartan-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Losartan (50mg)', 22, 'losartan-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Enalapril (5mg).jpg" alt="">
+                <h4 class="card--title">Enalapril (5mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.15</div>
+                    <input type="number" name="quantity" id="enalapril-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Enalapril (5mg)', 15, 'enalapril-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Lisinopril (10mg).jpg" alt="">
+                <h4 class="card--title">Lisinopril (10mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.12</div>
+                    <input type="number" name="quantity" id="lisinopril-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Lisinopril (10mg)', 12, 'lisinopril-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Atenolol (50mg).jpeg" alt="">
+                <h4 class="card--title">Atenolol (50mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.8</div>
+                    <input type="number" name="quantity" id="atenolol-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Atenolol (50mg)', 8, 'atenolol-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Metoprolol (50mg).jpeg" alt="">
+                <h4 class="card--title">Metoprolol (50mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.10</div>
+                    <input type="number" name="quantity" id="metoprolol-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Metoprolol (50mg)', 10, 'metoprolol-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Hydrochlorothiazide (25mg).jpg" alt="">
+                <h4 class="card--title">Hydrochlorothiazide (25mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.7</div>
+                    <input type="number" name="quantity" id="hydrochlorothiazide-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Hydrochlorothiazide (25mg)', 7, 'hydrochlorothiazide-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Diltiazem (30mg).jpg" alt="">
+                <h4 class="card--title">Diltiazem (30mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.15</div>
+                    <input type="number" name="quantity" id="diltiazem-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Diltiazem (30mg)', 15, 'diltiazem-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Nifedipine (10mg).jpeg" alt="">
+                <h4 class="card--title">Nifedipine (10mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.20</div>
+                    <input type="number" name="quantity" id="nifedipine-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Nifedipine (10mg)', 20, 'nifedipine-quantity')"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/Valsartan (80mg).jpg" alt="">
+                <h4 class="card--title">Valsartan (80mg)</h4>
+
+                <div class="card--price">
+                    <div class="price">Rs.30</div>
+                    <input type="number" name="quantity" id="valsartan-quantity" value="0" min="0">
+                    <i class="fa fa-plus" onclick="addToCart('Valsartan (80mg)', 30, 'valsartan-quantity')"></i>
+                </div>
+            </div>
+        </div>
+
+        <h2>Cart</h2>
+        <table id="cart">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+            </tbody>
+        </table>
+        <div id="total">Total: Rs. 0</div>
+        <button onclick="goToOrderPage()">Buy Now</button>
+        <button onclick="saveToFavourites()">Add to Favourites</button>
+        <button onclick="applyFavourites()">Apply Favourites</button>
+    </main>
+
+    <footer class="footer"> 
+        <div class="footer-content"> 
+            <p>&copy; 2024 Havelock City Hospital. All rights reserved.</p> 
+        </div> 
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html>
